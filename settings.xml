@@ -1,0 +1,10 @@
+<!-- settings.xml -->
+<settings>
+    <servers>
+        <server>
+            <id>pro-maven.liquibase.com</id>
+            <username>${env.AWS_MAVEN_ACCESS_KEY_ID}</username>
+            <password>${env.AWS_MAVEN_SECRET_ACCESS_KEY}</password>
+        </server>
+    </servers>
+</settings>
