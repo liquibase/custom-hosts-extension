@@ -13,3 +13,4 @@ buildNumber.properties
 liquibase.properties
 changelog.xml
 .idea
+liquibase_libs
