@@ -1,9 +1,13 @@
 # Liquibase Custom Hosts Extension
+![Community](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mcred/liquibase-header-footer/feature/badges/badges/community.json)
+![Pro](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mcred/liquibase-header-footer/feature/badges/badges/pro.json)
+
 Create custom host entries during Liquibase runtime instead of configuring them on the host system (i.e. /etc/hosts)
 
 # Installation
 The easiest way to install this extension is with `lpm` [liquibase package manager](https://github.com/liquibase/liquibase-package-manager).
 ```shell
+lpm update
 lpm add custom-hosts
 ```
 
