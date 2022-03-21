@@ -13,7 +13,7 @@ lpm add custom-hosts
 ```
 
 # Usage
-Add the `networking-hosts` property to your liquibase command. The value of this property needs to follow the `HOST:IP_ADDRESS` pattern. Multiple hosts are allowed with a comma separator (i.e. `not-a-domain:127.0.01,also-not-a-domain:127.0.0.1`).
+Add the `networking-hosts` property to your liquibase command. The value of this property needs to follow the `HOST:IP_ADDRESS` pattern. Multiple hosts are allowed with a comma separator (i.e. `not-a-domain:127.0.0.1,also-not-a-domain:127.0.0.1`).
 
 ### Possible formats:
 
