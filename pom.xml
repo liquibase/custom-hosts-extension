@@ -16,16 +16,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>pro-maven.liquibase.com</id>
-            <url>s3://liquibase-pro-maven/</url>
-        </repository>
-        <snapshotRepository>
-            <id>pro-maven.liquibase.com</id>
-            <url>s3://liquibase-pro-maven/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--
+      distributionManagement removed (TECHOPS-878 / TECHOPS-935): maven.liquibase.com
+      moved to Cloudflare R2 and the legacy s3://liquibase-pro-maven origin is being
+      decommissioned. This extension is archived (last released 2022). To republish,
+      adopt the current release model (build-logic Sonatype/Central workflow) or add an
+      R2 target with an endpoint-capable Maven wagon.
+    -->
 
     <dependencies>
         <dependency>
@@ -63,12 +60,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.seahen</groupId>
-            <artifactId>maven-s3-wagon</artifactId>
-            <version>1.3.3</version>
             <scope>test</scope>
         </dependency>
 
@@ -175,13 +166,6 @@
                 </executions>
             </plugin>
         </plugins>
-        <extensions>
-            <extension>
-                <groupId>com.github.seahen</groupId>
-                <artifactId>maven-s3-wagon</artifactId>
-                <version>1.3.3</version>
-            </extension>
-        </extensions>
     </build>
 
     <profiles>
